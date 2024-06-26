@@ -1,5 +1,5 @@
 {
-  "name": "clase26",
+  "name": "clase-34-implementacion-de-logger",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,7 +9,7 @@
     "start": "nodemon src/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ingrid Diaz",
   "license": "ISC",
   "dependencies": {
     "@faker-js/faker": "^7.6.0",

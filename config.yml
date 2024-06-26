@@ -11,7 +11,7 @@ scenarios:
       - log: "Creamos las variables para el usuario de prueba."
       - get:
           url: "/api/users/fakeruser"
-          capture: #capture significa que puedo tomar los campos de la respuesta y guardarlos para después.
+          capture: 
             - json: "$.first_name"
               as: "first_name"
             - json: "$.last_name"
@@ -25,16 +25,16 @@ scenarios:
       - log: "Registrando al usuario:"
       - post: 
           url: "/api/users/register"
-          json: #Json a modo de request body para esta petición.
-            first_name: "{{first_name}}" #Esto lo re-usamos de lo que hicimos arriba.
+          json: 
+            first_name: "{{first_name}}" 
             last_name: "{{last_name}}"
             email: "{{email}}"
             age: "{{age}}"
             password: "{{password}}"
-      - think: 2 #Simular que el usuario espera 2 segundos para hacer login.
+      - think: 2 
       - log: "Login User"
       - post:
           url: "/api/users/login"
-          json: #Json a modo de request body para esta petición.
+          json: 
             email: "{{email}}" 
             password: "{{password}}"
